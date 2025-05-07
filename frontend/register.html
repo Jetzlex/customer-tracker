@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müşteri Takip Sistemi - Kayıt</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Müşteri Takip Sistemi</h1>
+            <div id="registerForm">
+                <div class="form-group">
+                    <label for="username">Kullanıcı Adı</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Şifre</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Şifre Tekrar</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button onclick="register()">Kayıt Ol</button>
+                <p style="text-align: center; margin-top: 1rem;">
+                    Zaten hesabınız var mı? <a href="login.html">Giriş Yap</a>
+                </p>
+            </div>
+            <div id="qrCodeSection" style="display: none; text-align: center;">
+                <h3>Google Authenticator Kurulumu</h3>
+                <p>Lütfen aşağıdaki QR kodu Google Authenticator uygulaması ile tarayın</p>
+                <div id="qrCode" style="margin: 20px auto; padding: 10px; background: white; display: inline-block;"></div>
+                <p>QR kodu taradıktan sonra <a href="login.html">giriş sayfasına</a> dönebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/register.js"></script>
+</body>
+</html> 

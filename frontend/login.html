@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müşteri Takip Sistemi - Giriş</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Müşteri Takip Sistemi</h1>
+            <div id="loginForm">
+                <div class="form-group">
+                    <label for="username">Kullanıcı Adı</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Şifre</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button onclick="login()">Giriş Yap</button>
+                <p style="text-align: center; margin-top: 1rem;">
+                    Hesabınız yok mu? <a href="register.html">Kayıt Ol</a>
+                </p>
+            </div>
+            <div id="twoFactorForm" style="display: none;">
+                <div class="form-group">
+                    <label for="twoFactorCode">Google Authenticator Kodu</label>
+                    <input type="text" id="twoFactorCode" required>
+                </div>
+                <button onclick="verifyTwoFactor()">Doğrula</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html> 
